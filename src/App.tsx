@@ -31,7 +31,10 @@ function App() {
           <BsSendFill />
         </button>
       </form>
-      <pre>{response()}</pre>
+      <div class="text-red font-bold border-[#F08080] border rounded">
+    {response()}
+        
+      </div>
     </main>
   );
 }

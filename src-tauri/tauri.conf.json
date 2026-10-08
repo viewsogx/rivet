@@ -12,9 +12,10 @@
   "app": {
     "windows": [
       {
-        "title": "rivet",
-        "width": 800,
-        "height": 600
+        "theme": "Dark",
+        "title": "Rivet",
+        "width": 1300,
+        "height": 720
       }
     ],
     "security": {
