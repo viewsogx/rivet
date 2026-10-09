@@ -91,7 +91,7 @@ function App() {
       </form>
       {response() !== "" && (
         <div class="border-[#F08080] border rounded p-5 m-10 bg-gray-800 text-white">
-          <textarea>{response()}</textarea>
+          {response()}
         </div>
       )}
     </main>

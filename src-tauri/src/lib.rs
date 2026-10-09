@@ -11,7 +11,7 @@ async fn send_request(address: &str, method: &str, payload: &str) -> Result<Stri
             .map_err(|e| e.to_string())?,
         "POST" => client
             .post(address)
-            .body(payload.to_owned())
+            .json(&payload)
             .header("Content-Type", "application/json")
             .send()
             .await
