@@ -37,7 +37,7 @@ function App() {
   });
 
   return (
-    <main class="container">
+    <main>
       <img src="logo.png" class="logo w-1/15" />
 
       <form
@@ -48,11 +48,14 @@ function App() {
         }}
       >
         <div class="flex gap-4 m-5">
-          <select onChange={(e) => set_environment(e.currentTarget.value)}>
+          <select
+            class="rounded-2xl outline-0 bg-transparent"
+            onChange={(e) => set_environment(e.currentTarget.value)}
+          >
             <option value={"dev"}>Development (localhost)</option>
             <option value={"prod"}>Production</option>
           </select>
-          <div class="flex gap-2 bg-amber-200 p-5 rounded-2xl">
+          <div class="flex gap-2 bg-[#F08080] p-5 rounded-2xl">
             {environment() === "prod" ? (
               <input
                 id="prod_input"
@@ -86,9 +89,11 @@ function App() {
           </button>
         </div>
       </form>
-      <div class="border-[#F08080] border rounded p-5 m-10 bg-gray-800">
-        <pre>{response()}</pre>
-      </div>
+      {response() !== "" && (
+        <div class="border-[#F08080] border rounded p-5 m-10 bg-gray-800 text-white">
+          <textarea>{response()}</textarea>
+        </div>
+      )}
     </main>
   );
 }
